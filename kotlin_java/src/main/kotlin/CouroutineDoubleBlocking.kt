@@ -5,12 +5,14 @@ import kotlinx.coroutines.*
 fun main() = runBlocking {
     withContext(Dispatchers.IO) {
         launch {
-            while(true) {
-                println(readLine())
+            while (true) {
+                val input = readLine()
+                if (input == "end") break
+
             }
         }
         launch {
-            repeat(100) {
+            repeat(10) {
                 println("b")
                 delay(500)
             }
